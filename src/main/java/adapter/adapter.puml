@@ -1,0 +1,24 @@
+@startuml
+
+interface Target
+Class Adapter
+Class Adaptee
+Class Client
+
+Client ---> Target
+Adapter ...|>Target
+Adapter ---->Adaptee
+
+Interface Target{
+request()
+}
+
+Class Adapter{
+request()
+}
+
+Class Adaptee{
+specificRequest()
+}
+
+@enduml
