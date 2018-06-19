@@ -25,7 +25,8 @@
     10、迭代器模式提供一种方法顺序访问一个聚合对象中的各个元素，而又不暴露其内部的表示
     11、组合模式允许你将对象组合成树形结构来表现“整体/部分”层次结构。组合能让客户以一致的方式处理个别对象以及对象组合
     12、状态模式允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类
-
+    13、原型模式：用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。（Specify the kinds of objects to
+create using a prototypical instance,and create new objects by copying this prototype.
 
 
 
