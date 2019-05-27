@@ -1,26 +1,32 @@
 @startuml
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+interface Subject
+interface Observer
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+class ConcreteSubject
+class ConcreteObserver
 
-class ArrayList {
-Object[] elementData
-size()
+interface Subject{
+    +void registerObserver(Observer)
+    +void removeObserver(Observer)
+    +void notifyObserver()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+note "for all o in observers{o-> update }" as n1
+Subject  .. n1
+
+interface Observer{
+    +void update()
 }
+
+Subject <|--ConcreteSubject
+
+Observer <|-- ConcreteObserver
+
+Subject "1" --> "n" Observer
+ConcreteSubject--> ConcreteObserver
+
+
 
 @enduml

@@ -1,7 +1,7 @@
-package observe.impl;
+package observer.impl;
 
-import observe.Observer;
-import observe.Subject;
+import observer.Observer;
+import observer.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,23 +17,25 @@ public class WeatherData implements Subject {
     private float humidity;
     private float pressure;
 
-    /*
-    * 初始化观察者列表
-    * */
+    /**
+     * 初始化观察者列表
+     */
     public WeatherData() {
-        observers = new ArrayList<Observer>();
+        observers = new ArrayList<>();
     }
 
 
-
+    @Override
     public void registerObserver(Observer o) {
         observers.add(o);
     }
 
+    @Override
     public void removeObserver(Observer observer) {
         observers.remove(observer);
     }
 
+    @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
             observer.update(temperature, humidity, pressure);

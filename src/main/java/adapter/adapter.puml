@@ -6,9 +6,8 @@ Class Adaptee
 Class Client
 
 Client ---> Target
-Adapter ...|>Target
 Adapter ---->Adaptee
-
+Adapter ...|>Target
 Interface Target{
 request()
 }

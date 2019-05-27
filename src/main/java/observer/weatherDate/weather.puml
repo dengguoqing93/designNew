@@ -1,26 +1,34 @@
 @startuml
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+interface Subject
+interface Observer
+interface DisplayElement
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+class WeatherData
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+class CurrentConditionsDisplay
+class StatisticsDisplay
+class ThirdPartyDisplay
+class ForecastDisplay
 
-class ArrayList {
-Object[] elementData
-size()
-}
+Subject <|-- WeatherData
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
+DisplayElement <|-- CurrentConditionsDisplay
+Observer <|-- CurrentConditionsDisplay
+
+DisplayElement <|--- StatisticsDisplay
+Observer <|--- StatisticsDisplay
+
+
+DisplayElement <|---- ThirdPartyDisplay
+Observer <|---- ThirdPartyDisplay
+
+DisplayElement <|----- ForecastDisplay
+Observer <|----- ForecastDisplay
+
+Observer "*" <- "1" Subject
+
+
+
 
 @enduml

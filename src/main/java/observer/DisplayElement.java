@@ -1,4 +1,4 @@
-package observe;
+package observer;
 
 /**
  * @author guoqing
