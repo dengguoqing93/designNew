@@ -6,5 +6,12 @@ package factory.head;
  * @author dengguoqing
  * @date 2019/5/29
  */
-public class ChicagoStylePizzaStore {
+public class ChicagoStylePizzaStore extends PizzaStore {
+    @Override
+    protected Pizza createPizza(String type) {
+        if (Constant.CHEESE.equals(type)) {
+            return new ChicagoStyleCheesePizza();
+        }
+        return null;
+    }
 }

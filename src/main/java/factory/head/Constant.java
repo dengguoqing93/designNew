@@ -7,4 +7,9 @@ package factory.head;
  * @date 2019/5/29
  */
 public class Constant {
+    private Constant(){}
+
+
+    public static final String CHEESE = "cheese";
+
 }

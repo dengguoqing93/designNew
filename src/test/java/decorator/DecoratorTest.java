@@ -1,6 +1,6 @@
 package decorator;
 
-import org.junit.Before;
+import decorator.head.*;
 import org.junit.Test;
 
 /**

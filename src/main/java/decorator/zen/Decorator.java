@@ -1,4 +1,4 @@
-package decorator.model;
+package decorator.zen;
 
 /**
  * 抽象装饰者
