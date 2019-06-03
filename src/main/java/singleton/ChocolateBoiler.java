@@ -1,17 +1,15 @@
 package singleton;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 /**
  * @author guoqing
  * @since ： 2018/6/4 18:41
  * description:巧克力锅炉控制器：排除500加仑的未煮沸的混合物，或者锅炉已经满了还
- * 继续放原料，或者锅炉内还没放原谅就开始空烧！
+ * 继续放原料，或者锅炉内还没放原料就开始空烧！
  */
 public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
+
 
     /**
      * 单例模式实现巧克力锅炉控制器
